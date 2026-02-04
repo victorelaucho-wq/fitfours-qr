@@ -31,22 +31,21 @@
       background:rgba(18,20,26,.6);backdrop-filter: blur(8px);
     }
     .brand{display:flex;align-items:center;gap:10px;min-width:0}
-    .mark{
-  width:28px;
-  height:28px;
-  border-radius:10px;
-  object-fit:contain;
-  padding:4px;
-  background:rgba(255,255,255,.92);
-  border:1px solid rgba(255,255,255,.08);
-}
-
+      .mark{
+    width:78px;        /* más ancho */
+    height:28px;       /* mantiene alto */
+    border-radius:12px;
+    object-fit:contain;
+    padding:6px 10px;
+    background:rgba(255,255,255,.95);
+    border:1px solid rgba(255,255,255,.10);}
     .btn:hover{border-color:#2f3750}
     .hero{
       margin-top:12px;padding:16px;border:1px solid var(--line);
       border-radius:calc(var(--r) + 8px);background:rgba(18,20,26,.72);box-shadow:var(--shadow)
     }
     h1{margin:6px 0 6px;font-size:28px}
+    <img src="./logo-fitfours.png" alt="FitFours" style="height:40px; width:auto; margin-top:8px; opacity:.95;">
     .sub{margin:0;color:var(--muted);max-width:70ch}
     .grid{margin-top:12px;display:grid;gap:12px}
     .card{
