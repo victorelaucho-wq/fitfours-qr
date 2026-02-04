@@ -35,11 +35,17 @@
     }
     .brand{display:flex;align-items:center;gap:10px;min-width:0}
 
-    /* Isotipo pequeño (topbar) */
+    /* ✅ ÚNICA IMAGEN: isotipo visible en fondo oscuro */
     .mark{
-      width:26px;height:26px;border-radius:10px;
-      object-fit:contain;background:transparent;border:none;padding:0;
+      width:28px;
+      height:28px;
+      border-radius:10px;
+      object-fit:contain;
+      padding:5px;
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.10);
       display:block;
+      flex:0 0 auto;
     }
 
     .small{
@@ -59,32 +65,10 @@
       margin-top:12px;padding:16px;border:1px solid var(--line);
       border-radius:calc(var(--r) + 8px);
       background:rgba(18,20,26,.72);
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
+      box-shadow:var(--shadow)
     }
     h1{margin:6px 0 6px;font-size:28px}
     .sub{margin:0;color:var(--muted);max-width:70ch}
-
-    /* Logo grande en hero (blindado) */
-    .hero-brand{
-      margin-top:10px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 12px;
-      border-radius:14px;
-      background:rgba(255,255,255,.95);
-      border:1px solid rgba(255,255,255,.10);
-      max-width:100%;
-    }
-    .hero-logo{
-      display:block;
-      height:44px;
-      width:auto;
-      max-width:100%;
-      object-fit:contain;
-    }
 
     .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .chip{
@@ -117,79 +101,4 @@
 
     .footer{margin-top:14px;color:var(--muted);font-size:13px}
     .hr{height:1px;background:var(--line);margin:12px 0}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:12px;color:var(--muted)}
-
-    @media print{
-      body{background:#fff;color:#000}
-      .top button{display:none}
-      .card,.hero{box-shadow:none;background:#fff;border:1px solid #ddd}
-      a{color:#000;text-decoration:underline}
-    }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-    <div class="top">
-      <div class="brand">
-        <img class="mark" src="./logo-mark.png" alt="FitFours" />
-        <div class="small">
-          FitFours • M-2003 (QR del empaque) ·
-          <a href="https://latiendadelos4.com/" target="_blank" rel="noopener">latiendadelos4.com</a>
-        </div>
-      </div>
-      <button class="btn" type="button" onclick="window.print()">Imprimir / PDF</button>
-    </div>
-
-    <section class="hero">
-      <h1>Información del empaque</h1>
-
-      <div class="hero-brand">
-        <img class="hero-logo" src="./logo-fitfours.png" alt="FitFours" />
-      </div>
-
-      <p class="sub">Contenido del pack, seguridad infantil, uso general, origen y contacto. (El manual de uso puede ir en el QR del producto.)</p>
-
-      <div class="links">
-        <a class="chip" href="https://latiendadelos4.com/" target="_blank" rel="noopener">Web oficial</a>
-        <a class="chip" href="mailto:latiendadelos4online@gmail.com">Soporte por email</a>
-      </div>
-    </section>
-
-    <div class="grid">
-
-      <section class="card" id="contenido">
-        <h2>1) Contenido del pack</h2>
-        <div class="row">
-          <div class="callout ok">
-            <strong>Incluye</strong>
-            <ul>
-              <li>1 faja lumbar ajustable</li>
-              <li>1 almohadilla ergonómica extraíble</li>
-              <li>1 bolsa de malla reutilizable</li>
-            </ul>
-          </div>
-          <div class="callout">
-            <strong>Uso general</strong>
-            <ul>
-              <li>Producto para adultos / unisex</li>
-              <li>Uso externo únicamente</li>
-              <li>No dispositivo médico (proporciona soporte)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="card" id="seguridad">
-        <h2>2) Seguridad infantil (bolsas)</h2>
-        <div class="callout warn">
-          <strong>Riesgo de asfixia.</strong>
-          <ul>
-            <li>Mantenga la bolsa de plástico y la bolsa de malla fuera del alcance de bebés y niños.</li>
-            <li>No utilizar la bolsa como juguete ni para cubrir la cabeza.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="card" id="origen">
-        <h2>3) Orig
+    .mono{font-family:ui-monospace,SFMono
