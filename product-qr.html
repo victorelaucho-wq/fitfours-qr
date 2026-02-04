@@ -9,7 +9,7 @@
   <style>
     :root{
       --bg:#0b0c10; --card:#12141a; --text:#eef2f6; --muted:#b7c0c8;
-      --line:#232834; --accent:#9ad0ff; --warn:#ffd59a;
+      --line:#232834; --line2:#2f3750; --accent:#9ad0ff; --warn:#ffd59a;
       --shadow:0 10px 26px rgba(0,0,0,.35); --r:18px;
     }
     *{box-sizing:border-box}
@@ -24,16 +24,20 @@
     }
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
+
     .wrap{max-width:860px;margin:0 auto;padding:18px 14px 56px}
+
     .top{
       display:flex;justify-content:space-between;align-items:center;gap:12px;
       padding:10px 12px;border:1px solid var(--line);border-radius:999px;
       background:rgba(18,20,26,.6);backdrop-filter: blur(8px);
     }
     .brand{display:flex;align-items:center;gap:10px;min-width:0}
-      .mark{
-      width:78px;        /* más ancho */
-      height:28px;       /* mantiene alto */
+
+    /* LOGO BADGE (ancho, para logo horizontal) */
+    .mark{
+      width:86px;
+      height:28px;
       border-radius:12px;
       object-fit:contain;
       padding:6px 10px;
@@ -41,16 +45,30 @@
       border:1px solid rgba(255,255,255,.10);
     }
 
-    .btn:hover{border-color:#2f3750}
+    .small{
+      font-size:13px;color:var(--muted);
+      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:52vw
+    }
+
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid var(--line);background:rgba(18,20,26,.55);
+      color:var(--text);font-size:13px;cursor:pointer;
+    }
+    .btn:hover{border-color:var(--line2);text-decoration:none}
+
     .hero{
       margin-top:12px;padding:16px;border:1px solid var(--line);
-      border-radius:calc(var(--r) + 8px);background:rgba(18,20,26,.72);box-shadow:var(--shadow)
+      border-radius:calc(var(--r) + 8px);
+      background:rgba(18,20,26,.72);
+      box-shadow:var(--shadow)
     }
     h1{margin:6px 0 6px;font-size:28px}
-    <img src="./logo-fitfours.png" alt="FitFours" style="height:40px; width:auto; margin-top:8px; opacity:.95;">
     .sub{margin:0;color:var(--muted);max-width:70ch}
     .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
     .pill{font-size:13px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(18,20,26,.45)}
+
     .grid{margin-top:12px;display:grid;gap:12px}
     .card{
       padding:14px;border:1px solid var(--line);border-radius:calc(var(--r) + 6px);
@@ -66,6 +84,16 @@
     .warn{border-color:rgba(255,213,154,.35)}
     .footer{margin-top:14px;color:var(--muted);font-size:13px}
     .hr{height:1px;background:var(--line);margin:12px 0}
+
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid var(--line);background:rgba(18,20,26,.50);
+      color:var(--muted);font-size:13px;
+    }
+    .chip:hover{border-color:var(--line2);text-decoration:none}
+
     @media print{
       body{background:#fff;color:#000}
       .top button{display:none}
@@ -74,12 +102,16 @@
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="top">
       <div class="brand">
         <img class="mark" src="./logo-fitfours.png" alt="FitFours" />
-        <div class="small">FitFours • Faja Lumbar <strong>M-2003</strong> (QR del producto)</div>
+        <div class="small">
+          FitFours • Faja Lumbar <strong>M-2003</strong> (QR del producto) ·
+          <a href="https://latiendadelos4.com/" target="_blank" rel="noopener">latiendadelos4.com</a>
+        </div>
       </div>
       <button class="btn" type="button" onclick="window.print()">Imprimir / PDF</button>
     </div>
@@ -92,6 +124,10 @@
         <span class="pill">Soporte lumbar</span>
         <span class="pill">Trabajo • Deporte • Diario</span>
         <span class="pill">No dispositivo médico</span>
+      </div>
+      <div class="links">
+        <a class="chip" href="https://latiendadelos4.com/" target="_blank" rel="noopener">Web oficial</a>
+        <a class="chip" href="mailto:latiendadelos4online@gmail.com">Soporte por email</a>
       </div>
     </section>
 
@@ -142,6 +178,7 @@
         <h2>5) Contacto</h2>
         <div class="callout">
           <p style="margin:0 0 8px"><strong>Soporte:</strong> <a href="mailto:latiendadelos4online@gmail.com">latiendadelos4online@gmail.com</a></p>
+          <p style="margin:0 0 8px"><strong>Web:</strong> <a href="https://latiendadelos4.com/" target="_blank" rel="noopener">https://latiendadelos4.com/</a></p>
           <p style="margin:0">Incluye: modelo M-2003, talla y una foto si aplica.</p>
         </div>
       </section>
