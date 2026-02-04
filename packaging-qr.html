@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FitFours M-2003 — Información de empaque</title>
-  <meta name="description" content="Contenido del pack, seguridad infantil, origen y contacto para FitFours M-2003." />
+  <title>FitFours M-2003 — Guía rápida (Producto)</title>
+  <meta name="description" content="Guía rápida de uso, ajuste y cuidado para FitFours Faja Lumbar M-2003." />
   <meta name="theme-color" content="#0b0c10" />
   <style>
     :root{
       --bg:#0b0c10; --card:#12141a; --text:#eef2f6; --muted:#b7c0c8;
-      --line:#232834; --accent:#9ad0ff; --warn:#ffd59a; --ok:#a9ffcf;
+      --line:#232834; --line2:#2f3750; --accent:#9ad0ff; --warn:#ffd59a;
       --shadow:0 10px 26px rgba(0,0,0,.35); --r:18px;
     }
     *{box-sizing:border-box}
@@ -17,36 +17,58 @@
       margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial;
       color:var(--text);
       background:
-        radial-gradient(900px 520px at 20% -10%, rgba(255,213,154,.16), transparent 60%),
-        radial-gradient(900px 520px at 110% 10%, rgba(154,208,255,.14), transparent 60%),
+        radial-gradient(900px 520px at 10% -10%, rgba(154,208,255,.18), transparent 60%),
+        radial-gradient(800px 520px at 110% 0%, rgba(255,213,154,.08), transparent 60%),
         linear-gradient(180deg,#0b0c10 0%, #07080c 100%);
       line-height:1.45;
     }
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:900px;margin:0 auto;padding:18px 14px 56px}
+
+    .wrap{max-width:860px;margin:0 auto;padding:18px 14px 56px}
+
     .top{
       display:flex;justify-content:space-between;align-items:center;gap:12px;
       padding:10px 12px;border:1px solid var(--line);border-radius:999px;
       background:rgba(18,20,26,.6);backdrop-filter: blur(8px);
     }
     .brand{display:flex;align-items:center;gap:10px;min-width:0}
-      .mark{
-    width:78px;        /* más ancho */
-    height:28px;       /* mantiene alto */
-    border-radius:12px;
-    object-fit:contain;
-    padding:6px 10px;
-    background:rgba(255,255,255,.95);
-    border:1px solid rgba(255,255,255,.10);}
-    .btn:hover{border-color:#2f3750}
+
+    /* LOGO BADGE (ancho, para logo horizontal) */
+    .mark{
+      width:86px;
+      height:28px;
+      border-radius:12px;
+      object-fit:contain;
+      padding:6px 10px;
+      background:rgba(255,255,255,.95);
+      border:1px solid rgba(255,255,255,.10);
+    }
+
+    .small{
+      font-size:13px;color:var(--muted);
+      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:52vw
+    }
+
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid var(--line);background:rgba(18,20,26,.55);
+      color:var(--text);font-size:13px;cursor:pointer;
+    }
+    .btn:hover{border-color:var(--line2);text-decoration:none}
+
     .hero{
       margin-top:12px;padding:16px;border:1px solid var(--line);
-      border-radius:calc(var(--r) + 8px);background:rgba(18,20,26,.72);box-shadow:var(--shadow)
+      border-radius:calc(var(--r) + 8px);
+      background:rgba(18,20,26,.72);
+      box-shadow:var(--shadow)
     }
     h1{margin:6px 0 6px;font-size:28px}
-    <img src="./logo-fitfours.png" alt="FitFours" style="height:40px; width:auto; margin-top:8px; opacity:.95;">
     .sub{margin:0;color:var(--muted);max-width:70ch}
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .pill{font-size:13px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(18,20,26,.45)}
+
     .grid{margin-top:12px;display:grid;gap:12px}
     .card{
       padding:14px;border:1px solid var(--line);border-radius:calc(var(--r) + 6px);
@@ -60,12 +82,18 @@
     }
     .callout strong{color:var(--text)}
     .warn{border-color:rgba(255,213,154,.35)}
-    .ok{border-color:rgba(169,255,207,.28)}
-    .row{display:grid;gap:12px}
-    @media(min-width:760px){.row{grid-template-columns:1fr 1fr}}
     .footer{margin-top:14px;color:var(--muted);font-size:13px}
     .hr{height:1px;background:var(--line);margin:12px 0}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:12px;color:var(--muted)}
+
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid var(--line);background:rgba(18,20,26,.50);
+      color:var(--muted);font-size:13px;
+    }
+    .chip:hover{border-color:var(--line2);text-decoration:none}
+
     @media print{
       body{background:#fff;color:#000}
       .top button{display:none}
@@ -74,74 +102,84 @@
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="top">
       <div class="brand">
         <img class="mark" src="./logo-fitfours.png" alt="FitFours" />
-        <div class="small">FitFours • M-2003 (QR del empaque)</div>
+        <div class="small">
+          FitFours • Faja Lumbar <strong>M-2003</strong> (QR del producto) ·
+          <a href="https://latiendadelos4.com/" target="_blank" rel="noopener">latiendadelos4.com</a>
+        </div>
       </div>
       <button class="btn" type="button" onclick="window.print()">Imprimir / PDF</button>
     </div>
 
     <section class="hero">
-      <h1>Información del empaque</h1>
-      <p class="sub">Contenido del pack, seguridad infantil, uso general, origen y contacto. (El manual de uso puede ir en el QR del producto.)</p>
+      <h1>Guía rápida: uso, ajuste y cuidado</h1>
+      <p class="sub">Lo esencial para usar la faja correctamente. Uso externo. Soporte lumbar. Sin promesas médicas.</p>
+      <div class="pills" aria-label="Resumen">
+        <span class="pill">Uso externo</span>
+        <span class="pill">Soporte lumbar</span>
+        <span class="pill">Trabajo • Deporte • Diario</span>
+        <span class="pill">No dispositivo médico</span>
+      </div>
+      <div class="links">
+        <a class="chip" href="https://latiendadelos4.com/" target="_blank" rel="noopener">Web oficial</a>
+        <a class="chip" href="mailto:latiendadelos4online@gmail.com">Soporte por email</a>
+      </div>
     </section>
 
     <div class="grid">
 
-      <section class="card" id="contenido">
-        <h2>1) Contenido del pack</h2>
-        <div class="row">
-          <div class="callout ok">
-            <strong>Incluye</strong>
-            <ul>
-              <li>1 faja lumbar ajustable</li>
-              <li>1 almohadilla ergonómica extraíble</li>
-              <li>1 bolsa de malla reutilizable</li>
-            </ul>
-          </div>
-          <div class="callout">
-            <strong>Uso general</strong>
-            <ul>
-              <li>Producto para adultos / unisex</li>
-              <li>Uso externo únicamente</li>
-              <li>No dispositivo médico (proporciona soporte)</li>
-            </ul>
-          </div>
+      <section class="card" id="uso">
+        <h2>1) Uso previsto</h2>
+        <div class="callout warn">
+          <strong>Uso externo.</strong> Este producto proporciona <strong>soporte</strong> y <strong>no es un dispositivo médico</strong>.
+        </div>
+        <ul>
+          <li>Úsala para soporte lumbar en actividades diarias, trabajo o entrenamiento.</li>
+          <li>No sustituye la evaluación o tratamiento de un profesional sanitario.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="ajuste">
+        <h2>2) Colocación y ajuste (60 segundos)</h2>
+        <ul>
+          <li>Colócala alrededor de la cintura, centrando el soporte en la zona lumbar.</li>
+          <li>Si incluye almohadilla, ponla en el bolsillo interior y ajústala a tu comodidad.</li>
+          <li>Ajusta hasta notar soporte <strong>firme pero cómodo</strong> (sin cortar respiración).</li>
+          <li>Muévete 30–60 segundos y reajusta si se desplaza.</li>
+        </ul>
+        <div class="callout" style="margin-top:10px">
+          <strong>Señal de ajuste incorrecto:</strong> hormigueo, adormecimiento, dolor o irritación → afloja o retira.
         </div>
       </section>
 
       <section class="card" id="seguridad">
-        <h2>2) Seguridad infantil (bolsas)</h2>
-        <div class="callout warn">
-          <strong>Riesgo de asfixia.</strong>
-          <ul>
-            <li>Mantenga la bolsa de plástico y la bolsa de malla fuera del alcance de bebés y niños.</li>
-            <li>No utilizar la bolsa como juguete ni para cubrir la cabeza.</li>
-          </ul>
-        </div>
+        <h2>3) Seguridad</h2>
+        <ul>
+          <li><strong>No usar</strong> con lesiones abiertas, inflamación severa o alergia a <strong>poliéster, neopreno o elastano</strong>.</li>
+          <li>Si sientes <strong>dolor, hormigueo, entumecimiento o irritación</strong>: retira y consulta a un profesional sanitario.</li>
+          <li>No usar durante el sueño ni en situaciones donde no puedas reajustar el ajuste.</li>
+        </ul>
       </section>
 
-      <section class="card" id="origen">
-        <h2>3) Origen y responsable</h2>
-        <p><strong>Fabricado en China</strong> por <span class="mono">Market Union Co., LTD</span>.</p>
-        <div class="callout">
-          <strong>Identificación</strong>
-          <ul>
-            <li>Modelo: M-2003</li>
-            <li>Marca: FitFours</li>
-            <li>(Opcional) Lote: ________</li>
-          </ul>
-        </div>
+      <section class="card" id="cuidado">
+        <h2>4) Cuidado y limpieza</h2>
+        <ul>
+          <li>Lavar a mano con <strong>agua fría</strong> y <strong>jabón neutro</strong>.</li>
+          <li><strong>No</strong> lejía. <strong>No</strong> secadora. Secar al aire (sombra).</li>
+        </ul>
       </section>
 
       <section class="card" id="contacto">
-        <h2>4) Contacto</h2>
+        <h2>5) Contacto</h2>
         <div class="callout">
           <p style="margin:0 0 8px"><strong>Soporte:</strong> <a href="mailto:latiendadelos4online@gmail.com">latiendadelos4online@gmail.com</a></p>
-          <p style="margin:0">Incluye: modelo, talla, y una foto si aplica.</p>
+          <p style="margin:0 0 8px"><strong>Web:</strong> <a href="https://latiendadelos4.com/" target="_blank" rel="noopener">https://latiendadelos4.com/</a></p>
+          <p style="margin:0">Incluye: modelo M-2003, talla y una foto si aplica.</p>
         </div>
       </section>
 
