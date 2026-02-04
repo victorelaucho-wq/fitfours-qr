@@ -35,11 +35,17 @@
     }
     .brand{display:flex;align-items:center;gap:10px;min-width:0}
 
-    /* Isotipo pequeño (topbar) */
+    /* ✅ ÚNICA IMAGEN: isotipo visible en fondo oscuro */
     .mark{
-      width:26px;height:26px;border-radius:10px;
-      object-fit:contain;background:transparent;border:none;padding:0;
+      width:28px;
+      height:28px;
+      border-radius:10px;
+      object-fit:contain;
+      padding:5px;
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.10);
       display:block;
+      flex:0 0 auto;
     }
 
     .small{
@@ -59,32 +65,10 @@
       margin-top:12px;padding:16px;border:1px solid var(--line);
       border-radius:calc(var(--r) + 8px);
       background:rgba(18,20,26,.72);
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden; /* <- evita que imágenes se salgan */
+      box-shadow:var(--shadow)
     }
     h1{margin:6px 0 6px;font-size:28px}
     .sub{margin:0;color:var(--muted);max-width:70ch}
-
-    /* Logo grande en hero (blindado) */
-    .hero-brand{
-      margin-top:10px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 12px;
-      border-radius:14px;
-      background:rgba(255,255,255,.95);
-      border:1px solid rgba(255,255,255,.10);
-      max-width:100%;
-    }
-    .hero-logo{
-      display:block;
-      height:44px;
-      width:auto;
-      max-width:100%;
-      object-fit:contain;
-    }
 
     .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
     .pill{
@@ -142,11 +126,6 @@
 
     <section class="hero">
       <h1>Guía rápida: uso, ajuste y cuidado</h1>
-
-      <div class="hero-brand">
-        <img class="hero-logo" src="./logo-fitfours.png" alt="FitFours" />
-      </div>
-
       <p class="sub">Lo esencial para usar la faja correctamente. Uso externo. Soporte lumbar. Sin promesas médicas.</p>
 
       <div class="pills" aria-label="Resumen">
@@ -156,6 +135,7 @@
         <span class="pill">No dispositivo médico</span>
       </div>
 
+      <!-- ✅ soporte vuelve aquí -->
       <div class="links">
         <a class="chip" href="https://latiendadelos4.com/" target="_blank" rel="noopener">Web oficial</a>
         <a class="chip" href="mailto:latiendadelos4online@gmail.com">Soporte por email</a>
@@ -177,20 +157,3 @@
 
       <section class="card" id="ajuste">
         <h2>2) Colocación y ajuste (60 segundos)</h2>
-        <ul>
-          <li>Colócala alrededor de la cintura, centrando el soporte en la zona lumbar.</li>
-          <li>Si incluye almohadilla, ponla en el bolsillo interior y ajústala a tu comodidad.</li>
-          <li>Ajusta hasta notar soporte <strong>firme pero cómodo</strong> (sin cortar respiración).</li>
-          <li>Muévete 30–60 segundos y reajusta si se desplaza.</li>
-        </ul>
-        <div class="callout" style="margin-top:10px">
-          <strong>Señal de ajuste incorrecto:</strong> hormigueo, adormecimiento, dolor o irritación → afloja o retira.
-        </div>
-      </section>
-
-      <section class="card" id="seguridad">
-        <h2>3) Seguridad</h2>
-        <ul>
-          <li><strong>No usar</strong> con lesiones abiertas, inflamación severa o alergia a <strong>poliéster, neopreno o elastano</strong>.</li>
-          <li>Si sientes <strong>dolor, hormigueo, entumecimiento o irritación</strong>: retira y consulta a un profesional sanitario.</li>
-          <li>No usar durante el sueño ni en situaciones donde no
