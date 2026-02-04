@@ -31,12 +31,15 @@
       background:rgba(18,20,26,.6);backdrop-filter: blur(8px);
     }
     .brand{display:flex;align-items:center;gap:10px;min-width:0}
-    .mark{width:26px;height:26px;border-radius:10px;background:linear-gradient(135deg,rgba(154,208,255,.95),rgba(255,213,154,.75))}
-    .small{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:56vw}
-    .btn{
-      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
-      border:1px solid var(--line);background:rgba(18,20,26,.55);color:var(--text);font-size:13px;cursor:pointer;
-    }
+          .mark{
+        width:28px;
+        height:28px;
+        border-radius:10px;
+        object-fit:contain;
+        padding:4px;
+        background:rgba(255,255,255,.92);
+        border:1px solid rgba(255,255,255,.08);
+      }
     .btn:hover{border-color:#2f3750}
     .hero{
       margin-top:12px;padding:16px;border:1px solid var(--line);
@@ -73,7 +76,7 @@
   <div class="wrap">
     <div class="top">
       <div class="brand">
-        <div class="mark" aria-hidden="true"></div>
+        <img class="mark" src="./logo-fitfours.png" alt="FitFours" />
         <div class="small">FitFours • Faja Lumbar <strong>M-2003</strong> (QR del producto)</div>
       </div>
       <button class="btn" type="button" onclick="window.print()">Imprimir / PDF</button>
