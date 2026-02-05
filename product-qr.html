@@ -27,24 +27,23 @@
     .wrap{max-width:860px;margin:0 auto;padding:18px 14px 56px}
     .top{
       display:flex;justify-content:space-between;align-items:center;gap:12px;
-      padding:10px 12px;border:1px solid var(--line);border-radius:999px;
+      padding:12px 14px; /* <- cambia esto */
+      border:1px solid var(--line);border-radius:999px;
       background:rgba(18,20,26,.6);backdrop-filter: blur(8px);
     }
     .brand{display:flex;align-items:center;gap:10px;min-width:0}
-
-    /* ✅ CAMBIO ÚNICO: logo real en topbar, visible y “premium” */
     .mark{
-      width:72px;           /* más grande y legible */
-      height:30px;
-      border-radius:12px;
-      object-fit:contain;
+      height:56px;
+      width:auto;
       display:block;
-      padding:8px 10px;     /* aire elegante */
-      background:rgba(255,255,255,.96);  /* contraste para logo negro */
+      object-fit:contain;
+    
+      padding:10px 14px;
+      border-radius:18px;
+      background:rgba(255,255,255,.97);
       border:1px solid rgba(255,255,255,.10);
-      box-shadow:0 8px 18px rgba(0,0,0,.28);
+      box-shadow:0 10px 22px rgba(0,0,0,.30);
     }
-
     .small{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:56vw}
     .btn{
       display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
