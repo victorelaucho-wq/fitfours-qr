@@ -9,13 +9,12 @@
   <style>
     :root{
       --bg:#0b0c10; --card:#12141a; --text:#eef2f6; --muted:#b7c0c8;
-      --line:#232834; --line2:#2f3750; --accent:#9ad0ff; --warn:#ffd59a;
+      --line:#232834; --accent:#9ad0ff; --warn:#ffd59a;
       --shadow:0 10px 26px rgba(0,0,0,.35); --r:18px;
     }
     *{box-sizing:border-box}
     body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial;
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial;
       color:var(--text);
       background:
         radial-gradient(900px 520px at 10% -10%, rgba(154,208,255,.18), transparent 60%),
@@ -25,9 +24,7 @@
     }
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-
     .wrap{max-width:860px;margin:0 auto;padding:18px 14px 56px}
-
     .top{
       display:flex;justify-content:space-between;align-items:center;gap:12px;
       padding:10px 12px;border:1px solid var(--line);border-radius:999px;
@@ -35,56 +32,33 @@
     }
     .brand{display:flex;align-items:center;gap:10px;min-width:0}
 
-    /* ✅ ÚNICA IMAGEN: isotipo visible en fondo oscuro */
+    /* ✅ CAMBIO ÚNICO: logo real en topbar, visible y “premium” */
     .mark{
-      width:28px;
-      height:28px;
-      border-radius:10px;
+      width:72px;           /* más grande y legible */
+      height:30px;
+      border-radius:12px;
       object-fit:contain;
-      padding:5px;
-      background:rgba(255,255,255,.92);
-      border:1px solid rgba(255,255,255,.10);
       display:block;
-      flex:0 0 auto;
+      padding:8px 10px;     /* aire elegante */
+      background:rgba(255,255,255,.96);  /* contraste para logo negro */
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 8px 18px rgba(0,0,0,.28);
     }
 
-    .small{
-      font-size:13px;color:var(--muted);
-      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:56vw
-    }
-
+    .small{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:56vw}
     .btn{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 12px;border-radius:999px;
-      border:1px solid var(--line);background:rgba(18,20,26,.55);
-      color:var(--text);font-size:13px;cursor:pointer;
+      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
+      border:1px solid var(--line);background:rgba(18,20,26,.55);color:var(--text);font-size:13px;cursor:pointer;
     }
-    .btn:hover{border-color:var(--line2);text-decoration:none}
-
+    .btn:hover{border-color:#2f3750}
     .hero{
       margin-top:12px;padding:16px;border:1px solid var(--line);
-      border-radius:calc(var(--r) + 8px);
-      background:rgba(18,20,26,.72);
-      box-shadow:var(--shadow)
+      border-radius:calc(var(--r) + 8px);background:rgba(18,20,26,.72);box-shadow:var(--shadow)
     }
     h1{margin:6px 0 6px;font-size:28px}
     .sub{margin:0;color:var(--muted);max-width:70ch}
-
     .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .pill{
-      font-size:13px;padding:6px 10px;border:1px solid var(--line);
-      border-radius:999px;color:var(--muted);background:rgba(18,20,26,.45)
-    }
-
-    .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .chip{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid var(--line);background:rgba(18,20,26,.50);
-      color:var(--muted);font-size:13px;text-decoration:none;
-    }
-    .chip:hover{border-color:var(--line2)}
-
+    .pill{font-size:13px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(18,20,26,.45)}
     .grid{margin-top:12px;display:grid;gap:12px}
     .card{
       padding:14px;border:1px solid var(--line);border-radius:calc(var(--r) + 6px);
@@ -94,14 +68,12 @@
     ul{margin:8px 0 0 18px}
     li{margin:7px 0}
     .callout{
-      border:1px solid var(--line);border-radius:14px;padding:12px;
-      background:rgba(10,12,18,.7);color:var(--muted)
+      border:1px solid var(--line);border-radius:14px;padding:12px;background:rgba(10,12,18,.7);color:var(--muted)
     }
     .callout strong{color:var(--text)}
     .warn{border-color:rgba(255,213,154,.35)}
     .footer{margin-top:14px;color:var(--muted);font-size:13px}
     .hr{height:1px;background:var(--line);margin:12px 0}
-
     @media print{
       body{background:#fff;color:#000}
       .top button{display:none}
@@ -110,16 +82,13 @@
     }
   </style>
 </head>
-
 <body>
   <div class="wrap">
     <div class="top">
       <div class="brand">
-        <img class="mark" src="./logo-mark.png" alt="FitFours" />
-        <div class="small">
-          FitFours • Faja Lumbar <strong>M-2003</strong> (QR del producto) ·
-          <a href="https://latiendadelos4.com/" target="_blank" rel="noopener">latiendadelos4.com</a>
-        </div>
+        <!-- ✅ CAMBIO ÚNICO: antes era div mark, ahora es tu logo -->
+        <img class="mark" src="./logo-fitfours.png" alt="FitFours" />
+        <div class="small">FitFours • Faja Lumbar <strong>M-2003</strong> (QR del producto)</div>
       </div>
       <button class="btn" type="button" onclick="window.print()">Imprimir / PDF</button>
     </div>
@@ -127,18 +96,11 @@
     <section class="hero">
       <h1>Guía rápida: uso, ajuste y cuidado</h1>
       <p class="sub">Lo esencial para usar la faja correctamente. Uso externo. Soporte lumbar. Sin promesas médicas.</p>
-
       <div class="pills" aria-label="Resumen">
         <span class="pill">Uso externo</span>
         <span class="pill">Soporte lumbar</span>
         <span class="pill">Trabajo • Deporte • Diario</span>
         <span class="pill">No dispositivo médico</span>
-      </div>
-
-      <!-- ✅ soporte vuelve aquí -->
-      <div class="links">
-        <a class="chip" href="https://latiendadelos4.com/" target="_blank" rel="noopener">Web oficial</a>
-        <a class="chip" href="mailto:latiendadelos4online@gmail.com">Soporte por email</a>
       </div>
     </section>
 
@@ -157,3 +119,52 @@
 
       <section class="card" id="ajuste">
         <h2>2) Colocación y ajuste (60 segundos)</h2>
+        <ul>
+          <li>Colócala alrededor de la cintura, centrando el soporte en la zona lumbar.</li>
+          <li>Si incluye almohadilla, ponla en el bolsillo interior y ajústala a tu comodidad.</li>
+          <li>Ajusta hasta notar soporte <strong>firme pero cómodo</strong> (sin cortar respiración).</li>
+          <li>Muévete 30–60 segundos y reajusta si se desplaza.</li>
+        </ul>
+        <div class="callout" style="margin-top:10px">
+          <strong>Señal de ajuste incorrecto:</strong> hormigueo, adormecimiento, dolor o irritación → afloja o retira.
+        </div>
+      </section>
+
+      <section class="card" id="seguridad">
+        <h2>3) Seguridad</h2>
+        <ul>
+          <li><strong>No usar</strong> con lesiones abiertas, inflamación severa o alergia a <strong>poliéster, neopreno o elastano</strong>.</li>
+          <li>Si sientes <strong>dolor, hormigueo, entumecimiento o irritación</strong>: retira y consulta a un profesional sanitario.</li>
+          <li>No usar durante el sueño ni en situaciones donde no puedas reajustar el ajuste.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="cuidado">
+        <h2>4) Cuidado y limpieza</h2>
+        <ul>
+          <li>Lavar a mano con <strong>agua fría</strong> y <strong>jabón neutro</strong>.</li>
+          <li><strong>No</strong> lejía. <strong>No</strong> secadora. Secar al aire (sombra).</li>
+        </ul>
+      </section>
+
+      <section class="card" id="contacto">
+        <h2>5) Contacto</h2>
+        <div class="callout">
+          <p style="margin:0 0 8px"><strong>Soporte:</strong> <a href="mailto:soporte@fitfours.com">soporte@fitfours.com</a></p>
+          <p style="margin:0">Incluye: modelo M-2003, talla y una foto si aplica.</p>
+        </div>
+      </section>
+
+      <div class="footer">
+        <div class="hr"></div>
+        FitFours © <span id="y"></span>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
